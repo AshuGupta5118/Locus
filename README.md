@@ -34,7 +34,7 @@ Before you begin, ensure you have the following installed:
 
 1.  **Python:** Version 3.8 or higher. ([Download](https://www.python.org/downloads/))
 2.  **Git:** For cloning this repository. ([Download](https://git-scm.com/downloads))
-3.  **Ollama:** Installed and running. ([Download & Setup](https://ollama.com/))
+3.  **Ollama:** Installed and running. ([Download & Setup](https://youtu.be/tG0QwQxicgo?si=olsrFoJhZ4XBtpor))
     *   Make sure you have pulled an LLM model: `ollama pull llama3:8b` (or another model specified in `assistant.py`)
 4.  **Build Tools (for Whisper.cpp):**
     *   **Linux (Debian/Ubuntu):** `sudo apt update && sudo apt install build-essential git`
@@ -50,7 +50,7 @@ Before you begin, ensure you have the following installed:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/YourUsername/Locus.git # Replace YourUsername
+    git clone https://github.com/AshuGupta5118/Locus.git
     cd Locus
     ```
 
