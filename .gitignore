@@ -1,0 +1,83 @@
+# Python specific ignores (from template)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build artifacts
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+.env
+.venv
+env/
+venv/ # <--- Make sure this is here!
+ENV/
+env.bak/
+venv.bak/
+
+# IDE / Editor specific
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS specific
+.DS_Store # macOS
+Thumbs.db # Windows
+ehthumbs.db # Windows
+
+# ---- Locus Specific Ignores ----
+
+# Compiled tools and large models (Download these locally, don't commit)
+whisper.cpp/main
+whisper.cpp/*.o
+whisper.cpp/*.so
+whisper.cpp/build/
+whisper.cpp/models/*.* # Ignore whisper models
+!whisper.cpp/models/download-ggml-model.sh # Keep download script if needed
+
+piper-tts/piper
+piper-tts/piper.exe
+piper-tts/*.onnx     # Ignore piper models
+piper-tts/*.onnx.json # Ignore piper model configs
+
+# Temporary audio files
+*.wav
+*.txt # Ignore transcription outputs if not needed
+
+# Add any other specific files you want to ignore
