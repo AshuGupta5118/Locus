@@ -154,6 +154,7 @@ Locus/
 # temp_input.wav
 # temp_output.wav
 *(Note: Compiled tools and models inside `whisper.cpp` and `piper-tts` are intended to be acquired locally via the setup steps and are ignored by git to keep the repository small.)*
+```
 
 ## Troubleshooting
 
