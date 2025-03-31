@@ -125,23 +125,34 @@ Before you begin, ensure you have the following installed:
 
 ## Project Structure
 
-Locus/
-├── .git/ # Git internal files
-├── .gitignore # Specifies intentionally untracked files
-├── LICENSE # Project license
-├── README.md # This file
-├── assistant.py # Main application script
-├── requirements.txt # Python dependencies
-├── venv/ # Python virtual environment (ignored by git)
-├── whisper.cpp/ # Whisper.cpp tool (compiled locally, mostly ignored by git)
-│ ├── main # Compiled whisper executable
-│ └── models/ # Whisper models (ignored by git)
-│ └── ggml-base.en.bin
-└── piper-tts/ # Piper TTS tool (downloaded locally, mostly ignored by git)
-├── piper # Piper executable
-├── en_US-lessac-medium.onnx # Piper voice model (ignored by git)
-└── en_US-lessac-medium.onnx.json # Piper voice config (ignored by git)
+Here's the layout of the project directory after following the setup instructions. Items marked `(*)` are typically ignored by Git and managed locally.
 
+```plaintext
+Locus/
+├── .git/                     # Internal Git folder (hidden)
+├── .gitignore                # Specifies files/folders for Git to ignore
+├── LICENSE                   # Project license file
+├── README.md                 # This documentation file
+├── assistant.py              # The main Python voice assistant script
+├── requirements.txt          # Python package dependencies
+│
+├── venv/ (*)                 # Python virtual environment
+│   └── ...
+│
+├── whisper.cpp/ (*)          # Cloned Whisper.cpp repository
+│   ├── main (*)              # Compiled whisper executable
+│   ├── models/ (*)           # Whisper models folder
+│   │   └── *.bin (*)         # Downloaded whisper models
+│   └── ...                   # Other Whisper.cpp source files
+│
+└── piper-tts/ (*)            # Piper TTS directory
+    ├── piper (*)             # Piper executable
+    ├── *.onnx (*)            # Piper voice model
+    └── *.onnx.json (*)       # Piper voice config
+
+# Temporary files created during runtime (*)
+# temp_input.wav
+# temp_output.wav
 *(Note: Compiled tools and models inside `whisper.cpp` and `piper-tts` are intended to be acquired locally via the setup steps and are ignored by git to keep the repository small.)*
 
 ## Troubleshooting
